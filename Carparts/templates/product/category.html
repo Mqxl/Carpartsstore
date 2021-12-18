@@ -1,0 +1,97 @@
+
+    
+
+
+
+
+
+{% load static %}
+
+
+   
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+	<title>{% block title %}Car parts store{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
+
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
+</head>
+
+<body> 
+
+	<div class="container">
+	
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/simple-house-01.png' %}">
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							<img src="{% static 'img/simple-house-logo.png' %}" alt="Logo" class="tm-site-logo" /> 
+							<div class="tm-site-text-box">
+								<h1 class="tm-site-title">Car parts store</h1>
+								<h6 class="tm-site-description">Best for you</h6>	
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="http://127.0.0.1:8000" class="tm-nav-link active">Home</a></li>
+								<li class="tm-nav-li"><a href="http://127.0.0.1:8000/signup" class="tm-nav-link">Registration</a></li>
+								<li class="tm-nav-li"><a href="http://127.0.0.1:8000/about" class="tm-nav-link">About</a></li>
+								<li class="tm-nav-li"><a href="http://127.0.0.1:8000/contact" class="tm-nav-link">Contact</a></li>
+								
+							</ul>
+						</nav>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<main>
+			<header class="row tm-welcome-section">
+				 <div class="product-detail">
+        
+        <h1>{{ product.name }}</h1>
+        <h2><a href="{{ carparts.category.get_absolute_url }}">{{ product.urok }}</a></h2>
+        
+        <h2><a href="{{product.upload.url}}">{{ product.name }}</a></h2>
+        
+        
+    </div>
+    </div>
+			</header>
+			
+			
+		</main>
+
+		<footer class="tm-footer text-center">
+			<p>Copyright &copy; Ozer Selimzhan
+            
+            </p>
+		</footer>
+	</div>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/parallax.min.js' %}"></script>
+	<script>
+		$(document).ready(function(){
+			// Handle click on paging links
+			$('.tm-paging-link').click(function(e){
+				e.preventDefault();
+				
+				var page = $(this).text().toLowerCase();
+				$('.tm-gallery-page').addClass('hidden');
+				$('#tm-gallery-page-' + page).removeClass('hidden');
+				$('.tm-paging-link').removeClass('active');
+				$(this).addClass("active");
+			});
+		});
+	</script>
+</body>
+</html>

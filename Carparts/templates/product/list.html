@@ -1,0 +1,86 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %}
+    {% if category %}{{ category.name }}{% else %}Car parts store{% endif %}
+{% endblock %}
+{% block content %}
+<form action="{% url 'search_results' %}" method="get">		
+<div class="col-md-4 offset-md-4 mt-5 border  pt-3">
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" name="q">
+  <div class="input-group-append">
+    
+  </div>
+  </div>
+</div>
+			
+  
+  </form>
+			<div class="tm-paging-links">
+				<br>
+				
+			</div>
+<div class="row tm-gallery">
+<div class="container-xl">
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="h22">Featured <b>Products</b></h2>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+			
+			 
+			
+			<div class="carousel-inner">
+				<div class="item carousel-item active">
+					<div class="row">
+
+						{% for c in products %}
+
+
+						<div class="col-sm-3">
+							<div class="thumb-wrapper">
+								
+								<div class="img-box">
+									<img src="{{c.photo.url}}" id = "imag"class="img-fluid" alt=""/>									
+								</div>
+								<div class="thumb-content">
+									<h4>{{c.name|truncatechars:15}}</h4>									
+									
+									<p class="item-price"><b>{{c.price}} Tenge</b></p>
+									<a href="{{ c.get_absolute_url }}" class="btn btn-primary">Detail</a>
+								</div>						
+							</div>
+							<br>
+						</div>
+
+						{% endfor %}
+							
+													
+						
+					</div>
+				</div>
+				
+						
+						
+						
+										
+			
+						
+					
+						
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		</div>
+		</div>
+		
+	
+
+   
+
+
+{% endblock %}
+
