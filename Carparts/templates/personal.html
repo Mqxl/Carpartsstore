@@ -1,0 +1,449 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+	<title>{% block title %}Car parts store{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
+<style type="text/css">
+    .noMargin {
+  margin: 15px;
+
+}
+
+
+.one {
+  max-width: 250px;
+  background-color: white;
+  margin-top: 10px;
+  margin-right: 20px;
+  padding: 1rem;
+  
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(0,0,0,0.08);
+  background-color: #E4FFF6;
+  border-radius: 0.5rem;
+  
+  border-left: 0 solid #00ff99;
+  transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+  
+  
+  
+  
+
+}
+
+.two {
+    width: 250px;
+    margin-top: 10px;
+  background-color: white;
+  padding: 1rem;
+  
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(0,0,0,0.08);
+  background-color: #E4FFF6;
+  border-radius: 0.5rem;
+  
+  border-left: 0 solid #00ff99;
+  transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+ 
+  
+  
+  
+}
+
+.three {
+
+  background-color: white;
+  padding: 1rem;
+  
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(0,0,0,0.08);
+  background-color: #E4FFF6;
+  border-radius: 0.5rem;
+  
+  border-left: 0 solid #00ff99;
+  transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+  
+  
+  
+}
+
+
+
+.table1 {
+  
+  
+  line-height: 40px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #ed1c40;
+  
+  margin: 50px auto;
+  border-radius: .25rem;
+}
+
+.thead1 tr:first-child {
+  
+  background: #ed1c40;
+  color: #fff;
+  border: none;
+}
+
+.th1:first-child,
+.td1:first-child {
+
+  color: black;
+  padding: 0 15px 0 25px;
+
+}
+
+.th1 {
+  color: black;
+  font-weight: 500;
+  width: 780px;
+  
+
+}
+.td1 {
+    color: black;
+
+    
+  font-weight: 500;
+
+}
+
+.thead1 tr:last-child th {
+  border-bottom: 3px solid #ddd;
+}
+
+.tbody1 tr:hover {
+  background-color: #f2f2f2;
+  cursor: default;
+}
+
+.tbody1 tr:last-child td {
+   
+  border: none;
+}
+
+.tbody1 td {
+    
+  color: black;
+  border-bottom: 1px solid #ddd;
+
+
+}
+
+.td1:last-child {
+  display: table-cell;
+  color: black;
+  text-align: right;
+  padding-right: 180px;
+
+
+
+
+
+}
+
+.button2 {
+  color: #aaa;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-top: -4px;
+
+}
+
+.detail:hover {
+  color: #0a79df;
+}
+
+.cancel:hover {
+  color: #80F7D1;
+}
+.pay:hover {
+  color: #dc2a2a;
+}
+.box3{
+  border-width: 5px 3px 3px 5px;
+  border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+  transform: rotate(2deg);
+}
+
+</style>
+
+</head>
+
+<body> 
+
+
+   
+
+	<div class="container" >
+
+
+	
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/simple-house-01.png' %}">
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12" id="cent">
+							<img src="{% static 'img/carparts-logo-png-transparent.png' %}" alt="Logo" class="tm-site-logo" width="250" /> 
+							
+							<br>
+						</div>
+						
+							
+							<div class="hexagon-menu clear">
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content" href="http://127.0.0.1:8000">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-home"></i>
+                                                </span>
+                                                <span class="title">Home</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content" href="http://127.0.0.1:8000/about">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-bullseye"></i>
+                                                </span>
+                                                <span class="title">About</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content" href="http://127.0.0.1:8000/person">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-id-card"></i>
+                                                </span>
+                                                <span class="title">Personal</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content" href="http://127.0.0.1:8000/accounts/login">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-users"></i>
+                                                </span>
+                                                <span class="title">Registation</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content" href="http://127.0.0.1:8000/cart/cart/cart-detail/">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-shopping-basket"></i>
+                                                </span>
+                                                <span class="title">Cart|{{request.session.cart|length}}</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content" href="http://127.0.0.1:8000/contact">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-map-signs"></i>
+                                                </span>
+                                                <span class="title">Contact</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+							
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="gradient-border">
+            <div class="container">
+  <div class="row noMargin">
+    <div class="col one" >
+       
+            
+      <img class="rounded-circle account-img" src="{% if user.profile.image %}{{ user.profile.image.url }}{% else %}{% static 'default.jpg' %}{% endif %}" width="200" height="200" >
+      <br>
+      <br>
+      <input  class="button2" type="submit" onclick="location.href='http://127.0.0.1:8000/updateimage';" value="Update Profile Photo"/>
+        <br>
+        <br>
+        <input  class="button2" type="submit" onclick="location.href='http://127.0.0.1:8000/logou';" value="Logout"/>
+         
+            
+            
+            
+    </div>
+
+
+    <div class="col two" >
+        <h2 style="color: #94DF44; margin-left: 280px; font-family: 'Arial'; font-style: ">Personal data</h2>
+        <br>
+        <h5>Username: {{request.user}}</h5>
+        <h5>Full name: {{request.user.first_name}} {{request.user.last_name}}</h5>
+        <h5>Email: {{request.user.email}}</h5>
+        <h5>Date joined: {{request.user.date_joined}} </h5>
+        <h5>Total orders: {{dataset.count}} </h5>
+        
+        
+    </div>
+  </div>
+  
+    <div class="col three" >
+      <table class="table1">
+  <thead class="thead1">
+    <tr class="tr1">
+      <th colspan="5" class="th1">Orders</th>
+    </tr >
+    <tr class="tr1">
+      <th class="th1">Order id</th>
+      <th colspan="1" class="th1">Customer</th>
+      <th colspan="1" class="th1">Adress</th>
+      <th colspan="1" class="th1">Status</th>
+      <th colspan="1" class="th1">Detail</th>
+      
+      
+      
+    </tr>
+  </thead>
+  <tbody class="tbody1">
+    {% for data in dataset %}
+    <tr class="tr1">
+      <td class="td1">{{ data.id }}</td>
+      <td class="td1">{{ data.first_name }} {{ data.last_name }}</td>
+      <td class="td1">{{ data.address }} </td>
+      <td class="td1">{%if data.paid == 1 %} Paid {% else %} Not paid {% endif %}  </td>
+      <td class="td1">
+        <i class="fa fa-info fa-2x" onclick="window.location='http://127.0.0.1:8000/order/{{data.id}}/'"></i>  
+        
+        
+
+        
+      </td>
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+</table>
+    </div>
+    
+  
+
+
+            
+
+
+
+            
+            
+
+<br>
+			
+	</main>
+
+		<footer class="tm-footer text-center">
+			<p>Copyright &copy; Ozer Selimzhan
+            
+            </p>
+		</footer>
+	</div>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/parallax.min.js' %}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+	
+</body>
+</html>
