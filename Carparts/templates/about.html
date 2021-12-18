@@ -1,0 +1,304 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+	<title>{% block title %}Car parts store{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
+</head>
+
+<body> 
+
+
+   
+
+	<div class="container" >
+
+	
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/simple-house-01.png' %}">
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12" id="cent">
+							<img src="{% static 'img/carparts-logo-png-transparent.png' %}" alt="Logo" class="tm-site-logo" width="250" /> 
+							
+							<br>
+						</div>
+						
+							<!--<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="http://127.0.0.1:8000" class="tm-nav-link active">Home</a></li>
+								<li class="tm-nav-li"><a href="http://127.0.0.1:8000/signup" class="tm-nav-link">Registration</a></li>
+								<li class="tm-nav-li"><a href="http://127.0.0.1:8000/about" class="tm-nav-link">About</a></li>
+								<li class="tm-nav-li"><a href="http://127.0.0.1:8000/contact" class="tm-nav-link">Contact</a></li>
+								<li class="tm-nav-li"><a href="http://127.0.0.1:8000/cart/cart/cart-detail/" class="tm-nav-link">Cart|{{request.session.cart|length}}</a></li>
+								
+
+								
+								
+							</ul>-->
+							<div class="hexagon-menu clear">
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content" href="http://127.0.0.1:8000">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-home"></i>
+                                                </span>
+                                                <span class="title">Home</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content" href="http://127.0.0.1:8000/about">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-bullseye"></i>
+                                                </span>
+                                                <span class="title">About</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content" href="http://127.0.0.1:8000/person">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-id-card"></i>
+                                                </span>
+                                                <span class="title">Personal</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content" href="http://127.0.0.1:8000/accounts/login">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-users"></i>
+                                                </span>
+                                                <span class="title">Registation</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content" href="http://127.0.0.1:8000/cart/cart/cart-detail/">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-shopping-basket"></i>
+                                                </span>
+                                                <span class="title">Cart|{{request.session.cart|length}}</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content" href="http://127.0.0.1:8000/contact">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-map-signs"></i>
+                                                </span>
+                                                <span class="title">Contact</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+							
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<main class="gradient-border">
+			<br>
+			<header class="row tm-welcome-section" id="cente">
+				<h2 class="col-12 text-center tm-section-title">About Store</h2>
+				<p class="col-12 text-center">The portal is the very first in the market of Kazakhstan, who was able to offer its users a high-quality and convenient service for finding, ordering, tracking and delivering spare parts.
+The Rulim.kz platform has been working and is constantly being modernized since 2008, and you can always use a wide range of original and licensed spare parts, both in stock in Kazakhstan warehouses, and on order from any major supplier on the platform with minimum delivery times and place an order via the Internet at Kazakhstan, from warehouses of Russia, UAE, Japan, USA, Europe and Asia</p>
+			</header>
+			<br>
+			<br>
+
+			<div class="tm-container-inner tm-persons" id="cente">
+				<div class="row">
+					
+					<article class="col-lg-6">
+						<figure class="tm-person">
+							
+							<figcaption class="tm-person-description">
+								<h4 class="tm-person-name">Ozer Selimzhan</h4>
+								<p class="tm-person-title">Director</p>
+								<p class="tm-person-about">Director of the company and creator of this site.</p>
+								<div>
+									<a href="https://fb.com" class="tm-social-link"><i class="fa fa-facebook-official"></i></a>
+									<a href="https://twitter.com" class="tm-social-link"><i class="fa fa-twitter-square"></i></a>
+									<a href="https://instagram.com" class="tm-social-link"><i class="fa fa-instagram"></i></a>
+									<a href="https://youtube.com" class="tm-social-link"><i class="fa fa-youtube-play"></i></a>
+								</div>
+							</figcaption>
+						</figure>
+					</article>
+				</div>
+			</div>
+			<div class="tm-container-inner tm-featured-image">
+				<div class="row">
+					<div class="col-12">
+						
+					</div>
+				</div>
+			</div>
+			<div class="tm-container-inner tm-features">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="tm-feature">
+							<img src="{% static 'img/gallery/4994989.png'%}" alt="Image" class="fas fa-4x fa-seedling tm-feature-icong" width="120" />
+							<p class="tm-feature-description">
+
+The price lists of suppliers contain more than 30 million items of original and licensed auto parts from 320 leading world manufacturers.
+More than 2,000 large suppliers from Europe and the United Arab Emirates, Russia, Japan, the USA, Kyrgyzstan and Kazakhstan are connected to the system.
+Spare parts for tuning and special vehicles.</p>
+							<a href="index.html" class="tm-btn tm-btn-primary">Read More</a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="tm-feature">
+							<img src="{% static 'img/gallery/7361440.png'%}" alt="Image" class="fas fa-4x fa-seedling tm-feature-icong" width="120" />
+							
+							<p class="tm-feature-description">
+
+Each user has the opportunity to independently choose the company of the manufacturer of the spare part, the country of the supplier, the supplier's warehouse, delivery times and the minimum price, he also gets a personal manager - a consultant who helps you choose the necessary spare parts according to the VIN code of your car.
+</p>
+							<a href="index.html" class="tm-btn tm-btn-success">Read More</a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="tm-feature">
+							<img src="{% static 'img/gallery/online-shopping-2584900-2156112.png'%}" alt="Image" class="fas fa-4x fa-seedling tm-feature-icong" width="120" />
+							<p class="tm-feature-description">An extensive online catalog of auto parts for cars of Japanese, Korean and European manufacturers.
+The ability to search for parts of interest in various ways: request by part number, illustrated catalog, as well as by VIN-code of the car.
+Obtaining complete information about the part - the availability of licensed analogues (duplicates) from various manufacturers, applicability, prices and delivery times..</p>
+							<a href="index.html" class="tm-btn tm-btn-danger">Read More</a>
+						</div>
+					</div>
+				</div>
+			
+	</main>
+
+		<footer class="tm-footer text-center">
+			<p>Copyright &copy; Ozer Selimzhan
+            
+            </p>
+		</footer>
+	</div>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/parallax.min.js' %}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+	<script >
+		$(document).ready(function(){
+			// Handle click on paging links
+			$('.tm-paging-link').click(function(e){
+				e.preventDefault();
+				
+				var page = $(this).text().toLowerCase();
+				$('.tm-gallery-page').addClass('hidden');
+				$('#tm-gallery-page-' + page).removeClass('hidden');
+				$('.tm-paging-link').removeClass('active');
+				$(this).addClass("active");
+			});
+		});
+function img_b()
+{
+document.images[0].src=img_a[i].src
+document.images[0].src=img_a[i].src
+document.images[0].src=img_a[i].src
+i++
+if(i>2) i=0;
+setTimeout("img_b()", 3000)
+}
+	</script>
+</body>
+</html>
