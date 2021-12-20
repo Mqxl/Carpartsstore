@@ -1,7 +1,7 @@
-from django.conf.urls import url
-from . import views
 
+from . import views
+from django.urls.conf import re_path
 
 urlpatterns = [
-    url(r'^create/$', views.order_create, name='order_create'),
+    re_path(r'^create/$', views.order_create, name='order_create'),
 ]
